@@ -1,11 +1,37 @@
 # 🚀 اجرای سریع پروژه BlueBook
 
+## ⚠️ مهم: اولین بار که اجرا می‌کنید
+
+قبل از اجرا، assets را build کنید:
+
+### دوبار کلیک روی:
+```
+build-assets.bat
+```
+
+یا در terminal:
+```bash
+npm install
+npm run build
+```
+
+**توضیح:** این کار CSS‌ها و JS‌های Tailwind را آماده می‌کند.
+
+---
+
 ## روش ۱: اجرای خودکار (توصیه می‌شود)
 
 ### Windows - دوبار کلیک روی:
 ```
 start.bat
 ```
+این اسکریپت خودکار:
+- ✅ PHP را پیدا می‌کند
+- ✅ Database را می‌سازد
+- ✅ Migration را اجرا می‌کند
+- ✅ Assets را build می‌کند (اگر نباشند)
+- ✅ Cache را پاک می‌کند
+- ✅ سرور را اجرا می‌کند
 
 ### PowerShell:
 ```powershell
@@ -63,6 +89,15 @@ php artisan serve
 ---
 
 ## ❓ مشکل دارید؟
+
+### CSS‌ها در صفحه اصلی کار نمی‌کنند:
+```bash
+# راه‌حل:
+npm run build
+```
+یا دوبار کلیک روی: `build-assets.bat`
+
+📖 راهنمای کامل: `FIX_CSS.md`
 
 ### خطای Migration:
 ```bash
