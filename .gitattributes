@@ -1,0 +1,80 @@
+# Auto detect text files and normalize line endings to LF
+* text=auto eol=lf
+
+# PHP files
+*.php text eol=lf
+*.blade.php text eol=lf
+
+# JavaScript & CSS
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.sass text eol=lf
+*.vue text eol=lf
+
+# JSON, YAML, XML
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.xml text eol=lf
+
+# Config & Documentation
+*.md text eol=lf
+*.txt text eol=lf
+*.ini text eol=lf
+*.conf text eol=lf
+.env* text eol=lf
+.editorconfig text eol=lf
+
+# Shell scripts
+*.sh text eol=lf
+*.bash text eol=lf
+
+# Windows scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.webp binary
+*.bmp binary
+
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.eot binary
+
+*.pdf binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.7z binary
+*.rar binary
+
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+
+# Laravel Mix generated files
+public/mix-manifest.json -diff
+public/hot -diff
+public/storage -diff
+
+# Exclude from exports
+.gitattributes export-ignore
+.gitignore export-ignore
+.editorconfig export-ignore
+.phpunit.result.cache export-ignore
+tests/ export-ignore
+phpunit.xml export-ignore

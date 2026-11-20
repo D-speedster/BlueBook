@@ -1,0 +1,89 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Dependencies
+/vendor
+/node_modules
+
+# Build artifacts
+/public/build
+/public/hot
+/public/storage
+/public/css/filament
+/public/fonts/filament
+/public/js/filament
+
+# Storage
+/storage/*.key
+/storage/pail
+/storage/app/public/*
+!/storage/app/public/.gitkeep
+/storage/logs/*
+!/storage/logs/.gitkeep
+/storage/framework/cache/data/*
+!/storage/framework/cache/data/.gitkeep
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitkeep
+/storage/framework/testing/*
+!/storage/framework/testing/.gitkeep
+/storage/framework/views/*
+!/storage/framework/views/.gitkeep
+
+# Database
+/database/*.sqlite
+/database/*.sqlite-journal
+/database/database.sqlite
+
+# IDE & Tools
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+/.phpactor.json
+/.phpstorm.meta.php
+/_ide_helper.php
+/_ide_helper_models.php
+.DS_Store
+Thumbs.db
+
+# AI Tools
+/.agents
+/.kiro
+/.claude
+/.cursor
+/.aider
+
+# Testing & Cache
+/.phpunit.cache
+.phpunit.result.cache
+/coverage
+
+# Logs & Temp
+*.log
+*.cache
+*.tmp
+*.swp
+*.swo
+*~
+
+# Auth
+/auth.json
+
+# Laravel specific
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# Archives
+*.zip
+*.tar
+*.gz
+*.7z
+*.rar
+
+# Git backups
+.git.backup*

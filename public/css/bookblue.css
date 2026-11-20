@@ -1,0 +1,822 @@
+/* ======================================
+   BookBlue Store - Mobile-First Responsive
+   ====================================== */
+
+:root {
+    --bookblue-primary: #1e3a5f;
+    --bookblue-accent: #4a90e2;
+    --bookblue-bg: #faf8f5;
+    --bookblue-text: #2c3e50;
+    --bookblue-text-light: #7f8c8d;
+    --bookblue-border: #e8e4df;
+    
+    /* Spacing - Mobile First */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+}
+
+/* Reset & Base - Mobile First */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Arial, sans-serif;
+    background-color: var(--bookblue-bg);
+    color: var(--bookblue-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========== Header - Mobile First ========== */
+.bookblue-header {
+    background-color: white;
+    border-bottom: 1px solid var(--bookblue-border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.bookblue-header .navbar {
+    padding: var(--spacing-sm);
+}
+
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--bookblue-primary);
+    letter-spacing: -0.3px;
+    white-space: nowrap;
+}
+
+.brand-highlight {
+    color: var(--bookblue-accent);
+}
+
+/* Mobile Menu */
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: 2px solid var(--bookblue-accent);
+    outline-offset: 2px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--bookblue-text);
+    font-weight: 500;
+    padding: 0.75rem var(--spacing-sm);
+    transition: color 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--bookblue-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar-nav .nav-link {
+        transition: none;
+    }
+}
+
+/* Tablet & up */
+@media (min-width: 768px) {
+    .brand-name {
+        font-size: 1.5rem;
+    }
+    
+    .bookblue-header .navbar {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+}
+
+/* Laptop & up */
+@media (min-width: 1024px) {
+    .brand-name {
+        font-size: 1.75rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.5rem var(--spacing-md);
+    }
+}
+
+/* ========== Hero Banner - Mobile First ========== */
+.hero-banner {
+    background: linear-gradient(135deg, var(--bookblue-primary) 0%, #2c5282 100%);
+    color: white;
+    padding: var(--spacing-lg) 0;
+    margin-bottom: var(--spacing-lg);
+}
+
+.hero-content {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-content h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.3;
+}
+
+.hero-content p {
+    font-size: 0.95rem;
+    opacity: 0.95;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image-placeholder {
+    width: 200px;
+    height: 267px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+}
+
+/* Small phones (360px+) */
+@media (min-width: 360px) {
+    .hero-image,
+    .hero-image-placeholder {
+        max-width: 220px;
+        width: 220px;
+        height: 293px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .hero-banner {
+        padding: var(--spacing-xl) 0;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .hero-content {
+        text-align: right;
+        margin-bottom: 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .hero-content p {
+        font-size: 1.05rem;
+    }
+    
+    .hero-image-wrapper {
+        justify-content: flex-end;
+    }
+    
+    .hero-image,
+    .hero-image-placeholder {
+        max-width: 250px;
+        width: 250px;
+        height: 333px;
+    }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+    .hero-banner {
+        padding: 4rem 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.25rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .hero-image,
+    .hero-image-placeholder {
+        max-width: 280px;
+        width: 280px;
+        height: 373px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-image,
+    .hero-image-placeholder {
+        max-width: 300px;
+        width: 300px;
+        height: 400px;
+    }
+}
+
+/* ========== Section Headers - Mobile First ========== */
+.section-header {
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    padding: 0 var(--spacing-sm);
+}
+
+.section-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--bookblue-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.section-header p {
+    color: var(--bookblue-text-light);
+    font-size: 0.9rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .section-header {
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Laptop & Desktop */
+@media (min-width: 1024px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+}
+
+/* ========== Book Cards - Mobile First ========== */
+.book-card {
+    background: white;
+    border: 1px solid var(--bookblue-border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: var(--spacing-md);
+}
+
+.book-card:hover,
+.book-card:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    outline: 2px solid var(--bookblue-accent);
+    outline-offset: 2px;
+}
+
+.book-card:active {
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .book-card {
+        transition: none;
+    }
+    .book-card:hover {
+        transform: none;
+    }
+}
+
+.book-card-image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    background-color: #f8f9fa;
+}
+
+.book-card-placeholder {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bookblue-accent);
+}
+
+.book-card-placeholder svg {
+    width: 48px;
+    height: 48px;
+}
+
+.book-card-body {
+    padding: var(--spacing-md);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-category {
+    display: inline-block;
+    padding: 0.25rem 0.65rem;
+    background-color: rgba(74, 144, 226, 0.1);
+    color: var(--bookblue-accent);
+    border-radius: 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    align-self: flex-start;
+}
+
+.book-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--bookblue-primary);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.book-description {
+    color: var(--bookblue-text-light);
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-sm);
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+.book-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--bookblue-border);
+    gap: var(--spacing-sm);
+}
+
+.book-price-wrapper {
+    flex: 1;
+}
+
+.book-price-label {
+    font-size: 0.75rem;
+    color: var(--bookblue-text-light);
+    display: block;
+    font-weight: 400;
+    margin-bottom: 0.15rem;
+}
+
+.book-price {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--bookblue-accent);
+    white-space: nowrap;
+}
+
+.book-stock-wrapper {
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.book-stock {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.book-stock.in-stock {
+    color: #27ae60;
+}
+
+.book-stock.out-of-stock {
+    color: #e74c3c;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .book-card {
+        border-radius: 10px;
+        margin-bottom: 0;
+    }
+    
+    .book-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+    
+    .book-card-placeholder svg {
+        width: 64px;
+        height: 64px;
+    }
+    
+    .book-title {
+        font-size: 1.15rem;
+        -webkit-line-clamp: 2;
+    }
+    
+    .book-description {
+        font-size: 0.9rem;
+        -webkit-line-clamp: 3;
+    }
+    
+    .book-price {
+        font-size: 1.3rem;
+    }
+}
+
+/* Laptop & Desktop */
+@media (min-width: 1024px) {
+    .book-card {
+        border-radius: 12px;
+    }
+    
+    .book-card-body {
+        padding: var(--spacing-lg);
+    }
+    
+    .book-category {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.75rem;
+    }
+    
+    .book-title {
+        font-size: 1.25rem;
+    }
+    
+    .book-description {
+        font-size: 0.95rem;
+    }
+    
+    .book-price-label {
+        font-size: 0.85rem;
+    }
+    
+    .book-price {
+        font-size: 1.5rem;
+    }
+    
+    .book-stock {
+        font-size: 0.9rem;
+    }
+}
+
+/* ========== Buttons - Mobile First ========== */
+.btn-bookblue-primary {
+    background-color: var(--bookblue-accent);
+    border-color: var(--bookblue-accent);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--bookblue-accent);
+    cursor: pointer;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.btn-bookblue-primary:hover,
+.btn-bookblue-primary:focus {
+    background-color: #357abd;
+    border-color: #357abd;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+    outline: 2px solid var(--bookblue-accent);
+    outline-offset: 2px;
+}
+
+.btn-bookblue-primary:active {
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-bookblue-primary {
+        transition: none;
+    }
+    .btn-bookblue-primary:hover {
+        transform: none;
+    }
+}
+
+/* Tablet & up */
+@media (min-width: 768px) {
+    .btn-bookblue-primary {
+        padding: 0.75rem 2rem;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+}
+
+/* ========== About Section - Mobile First ========== */
+.about-section {
+    background-color: white;
+    border: 1px solid var(--bookblue-border);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.about-section h3 {
+    color: var(--bookblue-primary);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.25rem;
+}
+
+.about-section p {
+    color: var(--bookblue-text-light);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Tablet & up */
+@media (min-width: 768px) {
+    .about-section {
+        border-radius: 10px;
+        padding: var(--spacing-xl);
+    }
+    
+    .about-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .about-section p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+}
+
+/* Laptop & Desktop */
+@media (min-width: 1024px) {
+    .about-section {
+        border-radius: 12px;
+        padding: 3rem;
+        margin: 4rem 0;
+    }
+}
+
+/* ========== Footer - Mobile First ========== */
+.bookblue-footer {
+    background-color: white;
+    border-top: 1px solid var(--bookblue-border);
+    margin-top: var(--spacing-xl);
+}
+
+.bookblue-footer .py-5 {
+    padding-top: var(--spacing-xl) !important;
+    padding-bottom: var(--spacing-xl) !important;
+}
+
+.bookblue-footer h5 {
+    color: var(--bookblue-primary);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.bookblue-footer h6 {
+    color: var(--bookblue-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.bookblue-footer p,
+.bookblue-footer li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.bookblue-footer a {
+    transition: color 0.2s ease;
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-block;
+}
+
+.bookblue-footer a:hover,
+.bookblue-footer a:focus {
+    color: var(--bookblue-accent) !important;
+}
+
+.bookblue-footer .col-md-3,
+.bookblue-footer .col-md-6 {
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Tablet & up */
+@media (min-width: 768px) {
+    .bookblue-footer {
+        margin-top: 5rem;
+    }
+    
+    .bookblue-footer .col-md-3,
+    .bookblue-footer .col-md-6 {
+        margin-bottom: 0;
+    }
+}
+
+/* ========== Utilities - Mobile First ========== */
+.py-section {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+}
+
+.container {
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .py-section {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+    
+    .container {
+        padding-left: var(--spacing-md);
+        padding-right: var(--spacing-md);
+    }
+}
+
+/* Laptop & Desktop */
+@media (min-width: 1024px) {
+    .py-section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+/* ========== Accessibility ========== */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--bookblue-accent);
+    outline-offset: 2px;
+}
+
+/* Skip to main content */
+.skip-to-main {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1rem;
+    background-color: var(--bookblue-accent);
+    color: white;
+    text-decoration: none;
+}
+
+.skip-to-main:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1rem;
+}
+
+/* ========== Auth Pages - Mobile First ========== */
+.btn-register {
+    color: white !important;
+    background-color: var(--bookblue-accent);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-register:hover,
+.btn-register:focus {
+    background-color: #357abd;
+    color: white !important;
+}
+
+/* Auth Forms */
+.auth-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--bookblue-border);
+}
+
+/* Custom form styling */
+.form-control:focus {
+    border-color: var(--bookblue-accent);
+    box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.15);
+}
+
+.btn-primary {
+    background-color: var(--bookblue-accent);
+    border-color: var(--bookblue-accent);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #357abd;
+    border-color: #357abd;
+}
+
+.btn-outline-danger:hover,
+.btn-outline-danger:focus {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    border: 1px solid var(--bookblue-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: rgba(74, 144, 226, 0.1);
+    color: var(--bookblue-accent);
+}
+
+.dropdown-item button {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: right;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* ========== Print Styles ========== */
+@media print {
+    .bookblue-header,
+    .bookblue-footer,
+    .btn-bookblue-primary {
+        display: none;
+    }
+    
+    body {
+        background-color: white;
+    }
+    
+    .book-card {
+        page-break-inside: avoid;
+    }
+}
