@@ -20,6 +20,15 @@ class SlugTest extends TestCase
         $this->assertStringNotContainsString(' ', $slug);
     }
 
+    public function test_slug_preserves_zwnj(): void
+    {
+        $slug = SlugHelper::make('کتاب‌ها');
+        
+        // نیم‌فاصله (U+200C) باید حفظ شود
+        $this->assertEquals('کتاب‌ها', $slug);
+        $this->assertStringContainsString("\u{200C}", $slug);
+    }
+
     public function test_slug_handles_special_characters(): void
     {
         $slug = SlugHelper::make('کتاب: راهنمای کامل!');

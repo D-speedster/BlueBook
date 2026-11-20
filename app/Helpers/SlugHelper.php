@@ -14,8 +14,8 @@ class SlugHelper
      */
     public static function make(string $text): string
     {
-        // حذف کاراکترهای خاص و نگه‌داشتن حروف فارسی، انگلیسی، اعداد و فاصله
-        $slug = preg_replace('/[^\p{Arabic}\p{L}\p{N}\s-]/u', '', $text);
+        // حذف کاراکترهای خاص و نگه‌داشتن حروف فارسی، انگلیسی، اعداد، فاصله و نیم‌فاصله (ZWNJ)
+        $slug = preg_replace('/[^\p{Arabic}\p{L}\p{N}\s\x{200C}-]/u', '', $text);
         
         // تبدیل فاصله‌های متوالی به یک فاصله
         $slug = preg_replace('/\s+/', ' ', $slug);
