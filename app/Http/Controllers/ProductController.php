@@ -9,12 +9,11 @@ class ProductController extends Controller
 {
     public function index()
     {
-        // محصولات برای گرید اصلی (حداقل 8 محصول)
+        // محصولات برای گرید اصلی با pagination
         $products = Product::with('category')
             ->where('is_active', true)
             ->latest()
-            ->take(8)
-            ->get();
+            ->paginate(12);
 
         // محصول ویژه برای بخش "کتاب هفته"
         $featuredProduct = Product::with('category')
