@@ -1,0 +1,58 @@
+================================================
+   BlueBook - How to Run
+================================================
+
+FIRST TIME ONLY:
+----------------
+1. Double-click: build-assets.bat
+   (This builds CSS and JS files)
+
+2. Double-click: start.bat
+   (This runs migration and starts server)
+
+
+NEXT TIMES:
+-----------
+Just double-click: serve.bat
+(Quick start - just runs the server)
+
+
+OR use start.bat again if you want to:
+- Run new migrations
+- Rebuild assets
+- Clear cache
+
+
+OPEN IN BROWSER:
+----------------
+http://localhost:8000/register  (Sign up)
+http://localhost:8000/login     (Login)
+http://localhost:8000/account   (Customer panel)
+
+
+STOP SERVER:
+------------
+Press Ctrl+C in the terminal window
+
+
+TROUBLESHOOTING:
+----------------
+If CSS not loading:
+  -> Run build-assets.bat
+
+If migration error:
+  -> Run start.bat (it runs migration)
+
+If cache error:
+  -> php artisan config:clear
+  -> php artisan cache:clear
+
+
+FILES:
+------
+build-assets.bat  -> Build CSS/JS (run once)
+start.bat         -> Full setup + start
+serve.bat         -> Quick start (just server)
+
+
+================================================
