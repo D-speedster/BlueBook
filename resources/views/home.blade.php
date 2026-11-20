@@ -66,11 +66,11 @@
     @if($categories->isNotEmpty())
     <section class="py-6">
         <div class="flex gap-3 overflow-x-auto scrollbar-hide pb-2">
-            <a href="/" wire:navigate class="px-6 py-2.5 bg-navy text-white rounded-full font-medium whitespace-nowrap hover:bg-navy/90 transition flex-shrink-0">
+            <a href="/" class="px-6 py-2.5 bg-navy text-white rounded-full font-medium whitespace-nowrap hover:bg-navy/90 transition flex-shrink-0">
                 همه ({{ $products->count() }})
             </a>
             @foreach($categories as $category)
-            <a href="/category/{{ $category->slug }}" wire:navigate class="px-6 py-2.5 bg-sand/50 text-navy rounded-full font-medium whitespace-nowrap hover:bg-sand transition flex-shrink-0">
+            <a href="/category/{{ $category->slug }}" class="px-6 py-2.5 bg-sand/50 text-navy rounded-full font-medium whitespace-nowrap hover:bg-sand transition flex-shrink-0">
                 {{ $category->name }} <span class="text-sm opacity-70">({{ $category->products_count }})</span>
             </a>
             @endforeach
@@ -127,7 +127,7 @@
                     </div>
                     
                     <div class="flex gap-3">
-                        <a href="/products/{{ $featuredProduct->id }}" wire:navigate class="px-8 py-3 bg-terracotta hover:bg-terracotta/90 text-white rounded-full font-medium transition">
+                        <a href="/products/{{ $featuredProduct->id }}" class="px-8 py-3 bg-terracotta hover:bg-terracotta/90 text-white rounded-full font-medium transition">
                             مشاهده جزئیات
                         </a>
                         @if($featuredProduct->stock > 0)
@@ -161,7 +161,7 @@
         @else
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
                 @foreach($products as $product)
-                <a href="/products/{{ $product->id }}" wire:navigate class="group">
+                <a href="/products/{{ $product->id }}" class="group">
                     <div class="bg-white rounded-2xl lg:rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
                         <!-- Image -->
                         <div class="aspect-[3/4] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">

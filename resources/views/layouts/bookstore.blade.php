@@ -81,7 +81,7 @@
             <div class="flex items-center justify-between gap-6 py-4">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="/" wire:navigate class="text-2xl font-bold text-navy">
+                    <a href="/" class="text-2xl font-bold text-navy">
                         کتاب<span class="text-terracotta">فروش</span>
                     </a>
                 </div>
@@ -122,7 +122,7 @@
             <!-- Bottom Row: Navigation Menu -->
             <nav class="border-t border-gray-100 py-3">
                 <ul class="flex items-center gap-6 overflow-x-auto scrollbar-hide text-sm">
-                    <li><a href="/" wire:navigate class="text-navy hover:text-terracotta font-medium transition whitespace-nowrap">خانه</a></li>
+                    <li><a href="/" class="text-navy hover:text-terracotta font-medium transition whitespace-nowrap">خانه</a></li>
                     <li><a href="#" class="text-gray-600 hover:text-navy font-medium transition whitespace-nowrap">پرفروش‌ها</a></li>
                     <li><a href="#" class="text-gray-600 hover:text-navy font-medium transition whitespace-nowrap">تازه‌ها</a></li>
                     <li><a href="#" class="text-gray-600 hover:text-navy font-medium transition whitespace-nowrap">پیشنهاد ویژه</a></li>
@@ -155,7 +155,7 @@
                     <div>
                         <h3 class="text-xl font-bold mb-4">دسترسی سریع</h3>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="/" wire:navigate class="text-gray-300 hover:text-white transition">صفحه اصلی</a></li>
+                            <li><a href="/" class="text-gray-300 hover:text-white transition">صفحه اصلی</a></li>
                             <li><a href="#" class="text-gray-300 hover:text-white transition">درباره ما</a></li>
                             <li><a href="#" class="text-gray-300 hover:text-white transition">تماس با ما</a></li>
                             <li><a href="#" class="text-gray-300 hover:text-white transition">قوانین و مقررات</a></li>

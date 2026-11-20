@@ -43,7 +43,7 @@
     <header class="bookblue-header">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
-                <a class="navbar-brand" href="/" wire:navigate>
+                <a class="navbar-brand" href="/">
                     <span class="brand-name">بوک<span class="brand-highlight">بلو</span></span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -52,14 +52,14 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/" wire:navigate>همه کتاب‌ها</a>
+                            <a class="nav-link" href="/">همه کتاب‌ها</a>
                         </li>
                         @php
                             $headerCategories = \App\Models\Category::where('is_active', true)->get();
                         @endphp
                         @foreach($headerCategories as $cat)
                             <li class="nav-item">
-                                <a class="nav-link" href="/category/{{ $cat->slug }}" wire:navigate>{{ $cat->name }}</a>
+                                <a class="nav-link" href="/category/{{ $cat->slug }}">{{ $cat->name }}</a>
                             </li>
                         @endforeach
                     </ul>
@@ -110,9 +110,9 @@
                 <div class="col-md-3">
                     <h6 class="mb-3">دسترسی سریع</h6>
                     <ul class="list-unstyled">
-                        <li><a href="/" wire:navigate class="text-muted text-decoration-none">صفحه اصلی</a></li>
+                        <li><a href="/" class="text-muted text-decoration-none">صفحه اصلی</a></li>
                         @foreach($headerCategories as $cat)
-                            <li><a href="/category/{{ $cat->slug }}" wire:navigate class="text-muted text-decoration-none">{{ $cat->name }}</a></li>
+                            <li><a href="/category/{{ $cat->slug }}" class="text-muted text-decoration-none">{{ $cat->name }}</a></li>
                         @endforeach
                     </ul>
                 </div>

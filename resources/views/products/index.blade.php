@@ -13,11 +13,11 @@
             <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
                 <h2 class="text-lg font-semibold mb-3 text-gray-700">دسته‌بندی‌ها</h2>
                 <div class="flex flex-wrap gap-2">
-                    <a href="/" wire:navigate class="px-4 py-2 rounded-full {{ !isset($category) ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200' }} transition">
+                    <a href="/" class="px-4 py-2 rounded-full {{ !isset($category) ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200' }} transition">
                         همه ({{ \App\Models\Product::where('is_active', true)->count() }})
                     </a>
                     @foreach($categories as $cat)
-                        <a href="/category/{{ $cat->slug }}" wire:navigate
+                        <a href="/category/{{ $cat->slug }}"
                            class="px-4 py-2 rounded-full {{ isset($category) && $category->id === $cat->id ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200' }} transition">
                             {{ $cat->name }} ({{ $cat->products_count }})
                         </a>
@@ -48,7 +48,7 @@
         @else
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach($products as $product)
-                    <a href="/products/{{ $product->id }}" wire:navigate class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <a href="/products/{{ $product->id }}" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         @if($product->image)
                             <img src="{{ Storage::url($product->image) }}" alt="{{ $product->title }}" class="w-full h-64 object-cover">
                         @else

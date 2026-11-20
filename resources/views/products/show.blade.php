@@ -7,10 +7,10 @@
     <!-- Breadcrumb -->
     <nav class="mb-6 text-sm" aria-label="breadcrumb">
         <ol class="flex items-center gap-2 text-gray-600">
-            <li><a href="/" wire:navigate class="hover:text-navy transition">خانه</a></li>
+            <li><a href="/" class="hover:text-navy transition">خانه</a></li>
             <li><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></li>
             @if($product->category)
-                <li><a href="/category/{{ $product->category->slug }}" wire:navigate class="hover:text-navy transition">{{ $product->category->name }}</a></li>
+                <li><a href="/category/{{ $product->category->slug }}" class="hover:text-navy transition">{{ $product->category->name }}</a></li>
                 <li><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></li>
             @endif
             <li class="text-navy font-medium">{{ $product->title }}</li>
@@ -127,7 +127,7 @@
                 </div>
 
                 <!-- Back Button -->
-                <a href="/" wire:navigate class="block text-center px-8 py-3 bg-navy hover:bg-navy/90 text-white rounded-full font-medium transition">
+                <a href="/" class="block text-center px-8 py-3 bg-navy hover:bg-navy/90 text-white rounded-full font-medium transition">
                     بازگشت به صفحه اصلی
                 </a>
             </div>
@@ -149,7 +149,7 @@
                 <h2 class="text-2xl font-bold text-navy mb-6">کتاب‌های مرتبط</h2>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
                     @foreach($relatedProducts as $related)
-                    <a href="/products/{{ $related->id }}" wire:navigate class="group">
+                    <a href="/products/{{ $related->id }}" class="group">
                         <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition">
                             <div class="aspect-[3/4] bg-gradient-to-br from-gray-50 to-gray-100">
                                 @if($related->cover_image)

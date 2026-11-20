@@ -40,7 +40,7 @@
     <header class="bg-white shadow-sm mb-8">
         <div class="container mx-auto px-4 py-4">
             <h1 class="text-3xl font-bold text-gray-800">
-                <a href="/" wire:navigate class="hover:text-blue-600">نشر ماهریس</a>
+                <a href="/" class="hover:text-blue-600">نشر ماهریس</a>
             </h1>
         </div>
     </header>
