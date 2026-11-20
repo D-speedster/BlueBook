@@ -87,6 +87,19 @@ try {
 
 Write-Host ""
 
+# Build assets if needed
+if (-not (Test-Path "public\build\manifest.json")) {
+    Write-Host "[→] Building CSS and JS assets..." -ForegroundColor Yellow
+    npm install
+    npm run build
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "[✓] Assets built successfully" -ForegroundColor Green
+    } else {
+        Write-Host "[!] Asset build failed - continuing anyway..." -ForegroundColor Yellow
+    }
+    Write-Host ""
+}
+
 # Clear cache
 Write-Host "[→] Clearing cache..." -ForegroundColor Yellow
 & $phpExe artisan config:clear | Out-Null

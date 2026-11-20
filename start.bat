@@ -79,6 +79,19 @@ if %ERRORLEVEL% NEQ 0 (
 echo [✓] Migrations completed
 echo.
 
+REM Build assets if needed
+if not exist "public\build\manifest.json" (
+    echo [→] Building CSS and JS assets...
+    call npm install
+    call npm run build
+    if %ERRORLEVEL% EQU 0 (
+        echo [✓] Assets built successfully
+    ) else (
+        echo [!] Asset build failed - continuing anyway...
+    )
+    echo.
+)
+
 REM Clear cache
 echo [→] Clearing cache...
 "%PHP_PATH%" artisan config:clear >nul 2>&1
